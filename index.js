@@ -1,4 +1,4 @@
 import { AppRegistry } from "react-native";
-import Setup from "./js/Setup.js";
+import App from "./js/App.js";
 
-AppRegistry.registerComponent("nativeNav", () => Setup);
+AppRegistry.registerComponent("nativeNav", () => App);
