@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { View, Text } from "react-native";
-export default class FirstTabScreen extends Component {
+export default class Auction extends Component {
   render() {
     return (
       <View>
-        <Text>FirstTabScreen</Text>
+        <Text>Auction</Text>
       </View>
     );
   }
