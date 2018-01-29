@@ -43,6 +43,15 @@ const CustomButton = ({ text }) => (
 // Register the component
 Navigation.registerComponent("CustomButton", () => CustomButton);
 
+const navigatorStyle = {
+  navBarTextColor: "#FFF",
+  statusBarColor: "#0004D1",
+  navBarBackgroundColor: "#3336DA",
+  topTabTextColor: "#FFF",
+  selectedTopTabTextColor: "#999",
+  navBarButtonColor: "#FFF"
+};
+
 export default class App {
   constructor() {
     // since react-redux only works on components, we need to subscribe this class manually
@@ -91,22 +100,22 @@ export default class App {
           screen: {
             screen: "example.SaleScreen", // unique ID registered with Navigation.registerScreen
             title: "Sales", // title of the screen as appears in the nav bar (optional)
-            navigatorStyle: {}, // override the navigator style for the screen, see "Styling the navigator" below (optional)
-            navigatorButtons: {} // override the nav buttons for the screen, see "Adding buttons to the navigator" below (optional)
-            // topTabs: [
-            //   {
-            //     screenId: "example.Receival",
-            //     title: "Receival"
-            //   },
-            //   {
-            //     screenId: "example.Auction",
-            //     title: "Auction"
-            //   },
-            //   {
-            //     screenId: "example.Delivery",
-            //     title: "Delivery"
-            //   }
-            // ]
+            navigatorStyle, // override the navigator style for the screen, see "Styling the navigator" below (optional)
+            navigatorButtons: {}, // override the nav buttons for the screen, see "Adding buttons to the navigator" below (optional)
+            topTabs: [
+              {
+                screenId: "example.SaleScreen",
+                title: "LiveStock"
+              },
+              {
+                screenId: "example.SaleScreen",
+                title: "Clearance"
+              },
+              {
+                screenId: "example.Private",
+                title: "Private Sale"
+              }
+            ]
           },
           animationType: "slide-down"
         });
@@ -144,7 +153,7 @@ export default class App {
               selectedIcon: require("img/one_selected.png"),
               title: "Receival",
               overrideBackPress: true,
-              navigatorStyle: {}
+              navigatorStyle
             },
             {
               label: "Auction",
@@ -152,7 +161,7 @@ export default class App {
               icon: require("img/two.png"),
               selectedIcon: require("img/two_selected.png"),
               title: "Auction",
-              navigatorStyle: {}
+              navigatorStyle
             },
             {
               label: "Delivery",
@@ -160,7 +169,7 @@ export default class App {
               icon: require("img/three.png"),
               selectedIcon: require("img/three_selected.png"),
               title: "Delivery",
-              navigatorStyle: {}
+              navigatorStyle
             }
           ]
         });

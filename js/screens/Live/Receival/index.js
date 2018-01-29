@@ -4,6 +4,9 @@ import styles from "styles/receival";
 
 import { homeButton, fab } from "util/Buttons";
 export default class Receival extends Component {
+  componentWillUnmount() {
+    console.log("unmount receival---");
+  }
   render() {
     return (
       <View style={styles.containerStyle}>

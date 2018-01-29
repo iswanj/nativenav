@@ -2,27 +2,8 @@ import React, { Component } from "react";
 import { homeButton } from "util/Buttons";
 import { changeAppRoot } from "actions";
 
-const navigationStyles = {
-  navBarTextColor: "#FFF",
-  statusBarColor: "#0004D1",
-  navBarBackgroundColor: "#3336DA",
-  topTabTextColor: "#FFF",
-  selectedTopTabTextColor: "#999",
-  navBarButtonColor: "#FFF"
-};
-export function withNavStyles(Screen) {
-  return class extends Component {
-    static navigatorStyle = { ...navigationStyles };
-
-    render() {
-      return <Screen {...this.props} />;
-    }
-  };
-}
-
 export function withHomeIcon(Screen, store, addBtn = {}) {
   return class extends Component {
-    static navigatorStyle = { ...navigationStyles };
     static navigatorButtons = {
       leftButtons: [
         {

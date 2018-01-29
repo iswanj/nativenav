@@ -24,11 +24,7 @@ export default class Login extends Component {
   }
 
   gotoHome = () => {
-    this.props.navigator.push({
-      screen: "example.SaleScreen",
-      animated: true,
-      backButtonHidden: true
-    });
+    this.props.changeAppRoot("home");
   };
 }
 
