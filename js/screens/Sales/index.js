@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, TouchableNativeFeedback } from "react-native";
-
+import { connect } from "react-redux";
+import { changeAppRoot } from "actions";
 import styles from "styles/common";
 export default class SaleScreen extends Component {
   render() {
@@ -29,6 +30,14 @@ export default class SaleScreen extends Component {
   }
 
   _onPressButton = () => {
-    console.log("clicked sale tile");
+    this.props.changeAppRoot("after-sale");
   };
 }
+
+function mapStateToProps(state, ownProps) {
+  return {};
+}
+
+export const SaleScreenContainer = connect(mapStateToProps, {
+  changeAppRoot
+})(SaleScreen);
