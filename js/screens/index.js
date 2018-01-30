@@ -6,7 +6,7 @@ import { LoginContainer } from "screens/Login";
 import { SaleScreenContainer } from "screens/Sales";
 import Clearance from "screens/Sales/Clearance";
 import Private from "screens/Sales/Private";
-import Receival from "screens/Live/Receival";
+import { ReceivalContainer } from "screens/Live/Receival";
 import CreateReceival from "screens/Live/Receival/Create";
 import Auction from "screens/Live/Auction";
 import Delivery from "screens/Live/Delivery";
@@ -44,7 +44,7 @@ export function registerScreens(store, Provider) {
   };
   Navigation.registerComponent(
     "example.Receival",
-    () => withHomeIcon(Receival, store, addBtn),
+    () => withHomeIcon(ReceivalContainer, store, addBtn),
     store,
     Provider
   );

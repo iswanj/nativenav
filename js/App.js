@@ -108,7 +108,7 @@ export default class App {
                 title: "LiveStock"
               },
               {
-                screenId: "example.SaleScreen",
+                screenId: "example.Clearance",
                 title: "Clearance"
               },
               {
@@ -171,7 +171,10 @@ export default class App {
               title: "Delivery",
               navigatorStyle
             }
-          ]
+          ],
+          appStyle: {
+            tabBarTextFontSize: 22
+          }
         });
     }
   }

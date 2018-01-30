@@ -4,7 +4,11 @@ import { connect } from "react-redux";
 import { changeAppRoot } from "actions";
 import styles from "styles/common";
 export default class SaleScreen extends Component {
+  componentWillUnmount() {
+    console.log("unmount sales screen");
+  }
   render() {
+    console.log("render sales screen");
     return (
       <View style={styles.containerStyle}>
         <Text style={styles.titleText}>SaleScreen</Text>

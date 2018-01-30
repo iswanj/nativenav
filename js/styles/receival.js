@@ -12,6 +12,24 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     flex: 1,
     backgroundColor: "#EEE"
+  },
+  pageTitle: {
+    fontSize: 22
+  },
+  scrollView: {
+    paddingTop: 20
+  },
+  item: {
+    padding: 15,
+    backgroundColor: "#CCC",
+    marginBottom: 5
+  },
+  itemText: {
+    fontSize: 18
+  },
+  selected: {
+    borderWidth: 2,
+    borderColor: "#0004D1"
   }
 });
 
